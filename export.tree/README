@@ -1,0 +1,10 @@
+PSYCH-REST database.
+
+This MRI structural and function database was used in a restorative psychology study (1) using stress and post-stress recovery resting state fMRI to investigate the spontaneous neural activity associated with the effects of acute exposure to natural environments with high restorative potential (HRP, group 0) and built environments with low restorative potential (LRP, group 1). This fMRI dataset has specifically targeted the neural basis of visual processing in response to restorative environments using blocked design and resting-state fMRI scans.
+
+MRI protocols
+Brain images were obtained at the Magnetic Resonance Unit UNAM, with a 3-Tesla General Electric Discovery MR750 scanner using a head-mounted 32-channel coil, during a single session per participant. All participants were male. Structural imaging was acquired with a T1-weighted (T1w), FSPGR (TR/TE = 8.18/3.19 ms and TInv 450 ms) on a 256x256 mm field of view and 1.0 mm^2 resolution in 176 axial/sagittal slices. And all functional imaging was acquired using a T2*-weighted echo-planar imaging (EPI) BOLD sequence (TR/TE = 3000/40 ms), adjusting the series time to resting state in 6 min. and stimulus response run to 6 minutes comprising volumes across 38 interleaved slices (4 mm thickness), with a 64 × 64 acquisition matrix, resulting in a 4 x 4 x 4 mm^3 isotropic voxels.
+
+All data included in this database was transformed from raw DICOM format in anonymized NIfTI sets using dcm2niix (v1.0.20260724) and transcribed to BIDS structured database with dcm2bids (v3.2.0), the only preprocessing applied to the data was to deface all the high resolution structural 3D T1W images using pydeface (v2.1.0). This is a raw neuroimaging database, all fMRI tasks and acquisition order are described in (1).
+
+(1) Martínez-Soto, J., Gonzales-Santos, L., Pasaye, E. & Barrios, F. A. Exploration of neural correlates of restorative environment exposure through functional magnetic resonance. Intell. Build. Int. 5, 10–28 (2013).
