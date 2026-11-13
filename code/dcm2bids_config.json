@@ -1,0 +1,89 @@
+{
+  "post_op": [
+    {
+      "cmd": "pydeface --outfile dst_file src_file",
+      "datatype": "anat",
+      "suffix": ["T1w"],
+      "custom_entities": "rec-defaced"
+    }
+  ],  
+  "descriptions": [
+    {
+      "datatype": "anat",
+      "suffix": "T1w",
+      "criteria": {
+        "SeriesDescription": "*FSPGR*",
+        "ImageType": ["ORIGINAL", "PRIMARY", "OTHER", "MAGNITUDE"]
+      }
+    },
+    {
+      "datatype": "anat",
+      "suffix": "T2w",
+      "criteria": {
+        "SeriesDescription": "Ax T2",
+        "ImageType": ["ORIGINAL", "PRIMARY", "OTHER", "MAGNITUDE"]
+      }
+    },
+    {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_run-01",
+      "criteria": {
+        "SeriesDescription": "fMRI RestState PREvideo",
+        "ImageType": ["ORIGINAL", "PRIMARY", "EPI", "NONE", "MAGNITUDE"]
+      },
+      "sidecar_changes": {
+        "TaskName": "rest"
+      }
+     },
+     {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_run-02",
+      "criteria": {
+        "SeriesDescription": "fMRI RestState ENTRE",
+        "ImageType": ["ORIGINAL", "PRIMARY", "EPI", "NONE", "MAGNITUDE"]
+      },
+      "sidecar_changes": {
+        "TaskName": "rest"
+      }
+     },
+     {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-rest_run-03",
+      "criteria": {
+        "SeriesDescription": "fMRI RestState FINAL",
+        "ImageType": ["ORIGINAL", "PRIMARY", "EPI", "NONE", "MAGNITUDE"]
+      },
+      "sidecar_changes": {
+        "TaskName": "rest"
+      }
+     },
+    {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-video",
+      "criteria": {
+        "SeriesDescription": "fMRI Video",
+        "ImageType": ["ORIGINAL", "PRIMARY", "EPI", "NONE", "MAGNITUDE"]
+      },
+      "sidecar_changes": {
+        "TaskName": "video"
+      }
+     },
+    {
+      "datatype": "func",
+      "suffix": "bold",
+      "custom_entities": "task-psyres",
+      "criteria": {
+        "SeriesDescription": "fMRI ImagPsicolRest",
+        "ImageType": ["ORIGINAL", "PRIMARY", "EPI", "NONE", "MAGNITUDE"]
+      },
+      "sidecar_changes": {
+        "TaskName": "psyres"
+      }
+    }
+  ]
+}
+
